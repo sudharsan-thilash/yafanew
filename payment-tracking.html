@@ -1,507 +1,1542 @@
-<!DOCTYPE html><html class="html" lang="en-US" itemscope itemtype="http://schema.org/WebPage"><head><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button:not([disabled]):hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel:not([disabled]):hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger:not([disabled]):hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style>
+<!DOCTYPE html>
+<html class="html" lang="en-US" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+	<style type="text/css">
+		.swal-icon--error {
+			border-color: #f27474;
+			-webkit-animation: animateErrorIcon .5s;
+			animation: animateErrorIcon .5s
+		}
+
+		.swal-icon--error__x-mark {
+			position: relative;
+			display: block;
+			-webkit-animation: animateXMark .5s;
+			animation: animateXMark .5s
+		}
+
+		.swal-icon--error__line {
+			position: absolute;
+			height: 5px;
+			width: 47px;
+			background-color: #f27474;
+			display: block;
+			top: 37px;
+			border-radius: 2px
+		}
+
+		.swal-icon--error__line--left {
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+			left: 17px
+		}
+
+		.swal-icon--error__line--right {
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			right: 16px
+		}
+
+		@-webkit-keyframes animateErrorIcon {
+			0% {
+				-webkit-transform: rotateX(100deg);
+				transform: rotateX(100deg);
+				opacity: 0
+			}
+
+			to {
+				-webkit-transform: rotateX(0deg);
+				transform: rotateX(0deg);
+				opacity: 1
+			}
+		}
+
+		@keyframes animateErrorIcon {
+			0% {
+				-webkit-transform: rotateX(100deg);
+				transform: rotateX(100deg);
+				opacity: 0
+			}
+
+			to {
+				-webkit-transform: rotateX(0deg);
+				transform: rotateX(0deg);
+				opacity: 1
+			}
+		}
+
+		@-webkit-keyframes animateXMark {
+			0% {
+				-webkit-transform: scale(.4);
+				transform: scale(.4);
+				margin-top: 26px;
+				opacity: 0
+			}
+
+			50% {
+				-webkit-transform: scale(.4);
+				transform: scale(.4);
+				margin-top: 26px;
+				opacity: 0
+			}
+
+			80% {
+				-webkit-transform: scale(1.15);
+				transform: scale(1.15);
+				margin-top: -6px
+			}
+
+			to {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				margin-top: 0;
+				opacity: 1
+			}
+		}
+
+		@keyframes animateXMark {
+			0% {
+				-webkit-transform: scale(.4);
+				transform: scale(.4);
+				margin-top: 26px;
+				opacity: 0
+			}
+
+			50% {
+				-webkit-transform: scale(.4);
+				transform: scale(.4);
+				margin-top: 26px;
+				opacity: 0
+			}
+
+			80% {
+				-webkit-transform: scale(1.15);
+				transform: scale(1.15);
+				margin-top: -6px
+			}
+
+			to {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				margin-top: 0;
+				opacity: 1
+			}
+		}
+
+		.swal-icon--warning {
+			border-color: #f8bb86;
+			-webkit-animation: pulseWarning .75s infinite alternate;
+			animation: pulseWarning .75s infinite alternate
+		}
+
+		.swal-icon--warning__body {
+			width: 5px;
+			height: 47px;
+			top: 10px;
+			border-radius: 2px;
+			margin-left: -2px
+		}
+
+		.swal-icon--warning__body,
+		.swal-icon--warning__dot {
+			position: absolute;
+			left: 50%;
+			background-color: #f8bb86
+		}
+
+		.swal-icon--warning__dot {
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			margin-left: -4px;
+			bottom: -11px
+		}
+
+		@-webkit-keyframes pulseWarning {
+			0% {
+				border-color: #f8d486
+			}
+
+			to {
+				border-color: #f8bb86
+			}
+		}
+
+		@keyframes pulseWarning {
+			0% {
+				border-color: #f8d486
+			}
+
+			to {
+				border-color: #f8bb86
+			}
+		}
+
+		.swal-icon--success {
+			border-color: #a5dc86
+		}
+
+		.swal-icon--success:after,
+		.swal-icon--success:before {
+			content: "";
+			border-radius: 50%;
+			position: absolute;
+			width: 60px;
+			height: 120px;
+			background: #fff;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg)
+		}
+
+		.swal-icon--success:before {
+			border-radius: 120px 0 0 120px;
+			top: -7px;
+			left: -33px;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			-webkit-transform-origin: 60px 60px;
+			transform-origin: 60px 60px
+		}
+
+		.swal-icon--success:after {
+			border-radius: 0 120px 120px 0;
+			top: -11px;
+			left: 30px;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			-webkit-transform-origin: 0 60px;
+			transform-origin: 0 60px;
+			-webkit-animation: rotatePlaceholder 4.25s ease-in;
+			animation: rotatePlaceholder 4.25s ease-in
+		}
+
+		.swal-icon--success__ring {
+			width: 80px;
+			height: 80px;
+			border: 4px solid hsla(98, 55%, 69%, .2);
+			border-radius: 50%;
+			box-sizing: content-box;
+			position: absolute;
+			left: -4px;
+			top: -4px;
+			z-index: 2
+		}
+
+		.swal-icon--success__hide-corners {
+			width: 5px;
+			height: 90px;
+			background-color: #fff;
+			padding: 1px;
+			position: absolute;
+			left: 28px;
+			top: 8px;
+			z-index: 1;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg)
+		}
+
+		.swal-icon--success__line {
+			height: 5px;
+			background-color: #a5dc86;
+			display: block;
+			border-radius: 2px;
+			position: absolute;
+			z-index: 2
+		}
+
+		.swal-icon--success__line--tip {
+			width: 25px;
+			left: 14px;
+			top: 46px;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+			-webkit-animation: animateSuccessTip .75s;
+			animation: animateSuccessTip .75s
+		}
+
+		.swal-icon--success__line--long {
+			width: 47px;
+			right: 8px;
+			top: 38px;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			-webkit-animation: animateSuccessLong .75s;
+			animation: animateSuccessLong .75s
+		}
+
+		@-webkit-keyframes rotatePlaceholder {
+			0% {
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg)
+			}
+
+			5% {
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg)
+			}
+
+			12% {
+				-webkit-transform: rotate(-405deg);
+				transform: rotate(-405deg)
+			}
+
+			to {
+				-webkit-transform: rotate(-405deg);
+				transform: rotate(-405deg)
+			}
+		}
+
+		@keyframes rotatePlaceholder {
+			0% {
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg)
+			}
+
+			5% {
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg)
+			}
+
+			12% {
+				-webkit-transform: rotate(-405deg);
+				transform: rotate(-405deg)
+			}
+
+			to {
+				-webkit-transform: rotate(-405deg);
+				transform: rotate(-405deg)
+			}
+		}
+
+		@-webkit-keyframes animateSuccessTip {
+			0% {
+				width: 0;
+				left: 1px;
+				top: 19px
+			}
+
+			54% {
+				width: 0;
+				left: 1px;
+				top: 19px
+			}
+
+			70% {
+				width: 50px;
+				left: -8px;
+				top: 37px
+			}
+
+			84% {
+				width: 17px;
+				left: 21px;
+				top: 48px
+			}
+
+			to {
+				width: 25px;
+				left: 14px;
+				top: 45px
+			}
+		}
+
+		@keyframes animateSuccessTip {
+			0% {
+				width: 0;
+				left: 1px;
+				top: 19px
+			}
+
+			54% {
+				width: 0;
+				left: 1px;
+				top: 19px
+			}
+
+			70% {
+				width: 50px;
+				left: -8px;
+				top: 37px
+			}
+
+			84% {
+				width: 17px;
+				left: 21px;
+				top: 48px
+			}
+
+			to {
+				width: 25px;
+				left: 14px;
+				top: 45px
+			}
+		}
+
+		@-webkit-keyframes animateSuccessLong {
+			0% {
+				width: 0;
+				right: 46px;
+				top: 54px
+			}
+
+			65% {
+				width: 0;
+				right: 46px;
+				top: 54px
+			}
+
+			84% {
+				width: 55px;
+				right: 0;
+				top: 35px
+			}
+
+			to {
+				width: 47px;
+				right: 8px;
+				top: 38px
+			}
+		}
+
+		@keyframes animateSuccessLong {
+			0% {
+				width: 0;
+				right: 46px;
+				top: 54px
+			}
+
+			65% {
+				width: 0;
+				right: 46px;
+				top: 54px
+			}
+
+			84% {
+				width: 55px;
+				right: 0;
+				top: 35px
+			}
+
+			to {
+				width: 47px;
+				right: 8px;
+				top: 38px
+			}
+		}
+
+		.swal-icon--info {
+			border-color: #c9dae1
+		}
+
+		.swal-icon--info:before {
+			width: 5px;
+			height: 29px;
+			bottom: 17px;
+			border-radius: 2px;
+			margin-left: -2px
+		}
+
+		.swal-icon--info:after,
+		.swal-icon--info:before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			background-color: #c9dae1
+		}
+
+		.swal-icon--info:after {
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			margin-left: -3px;
+			top: 19px
+		}
+
+		.swal-icon {
+			width: 80px;
+			height: 80px;
+			border-width: 4px;
+			border-style: solid;
+			border-radius: 50%;
+			padding: 0;
+			position: relative;
+			box-sizing: content-box;
+			margin: 20px auto
+		}
+
+		.swal-icon:first-child {
+			margin-top: 32px
+		}
+
+		.swal-icon--custom {
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			border: none;
+			border-radius: 0
+		}
+
+		.swal-icon img {
+			max-width: 100%;
+			max-height: 100%
+		}
+
+		.swal-title {
+			color: rgba(0, 0, 0, .65);
+			font-weight: 600;
+			text-transform: none;
+			position: relative;
+			display: block;
+			padding: 13px 16px;
+			font-size: 27px;
+			line-height: normal;
+			text-align: center;
+			margin-bottom: 0
+		}
+
+		.swal-title:first-child {
+			margin-top: 26px
+		}
+
+		.swal-title:not(:first-child) {
+			padding-bottom: 0
+		}
+
+		.swal-title:not(:last-child) {
+			margin-bottom: 13px
+		}
+
+		.swal-text {
+			font-size: 16px;
+			position: relative;
+			float: none;
+			line-height: normal;
+			vertical-align: top;
+			text-align: left;
+			display: inline-block;
+			margin: 0;
+			padding: 0 10px;
+			font-weight: 400;
+			color: rgba(0, 0, 0, .64);
+			max-width: calc(100% - 20px);
+			overflow-wrap: break-word;
+			box-sizing: border-box
+		}
+
+		.swal-text:first-child {
+			margin-top: 45px
+		}
+
+		.swal-text:last-child {
+			margin-bottom: 45px
+		}
+
+		.swal-footer {
+			text-align: right;
+			padding-top: 13px;
+			margin-top: 13px;
+			padding: 13px 16px;
+			border-radius: inherit;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0
+		}
+
+		.swal-button-container {
+			margin: 5px;
+			display: inline-block;
+			position: relative
+		}
+
+		.swal-button {
+			background-color: #7cd1f9;
+			color: #fff;
+			border: none;
+			box-shadow: none;
+			border-radius: 5px;
+			font-weight: 600;
+			font-size: 14px;
+			padding: 10px 24px;
+			margin: 0;
+			cursor: pointer
+		}
+
+		.swal-button:not([disabled]):hover {
+			background-color: #78cbf2
+		}
+
+		.swal-button:active {
+			background-color: #70bce0
+		}
+
+		.swal-button:focus {
+			outline: none;
+			box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, .29)
+		}
+
+		.swal-button[disabled] {
+			opacity: .5;
+			cursor: default
+		}
+
+		.swal-button::-moz-focus-inner {
+			border: 0
+		}
+
+		.swal-button--cancel {
+			color: #555;
+			background-color: #efefef
+		}
+
+		.swal-button--cancel:not([disabled]):hover {
+			background-color: #e8e8e8
+		}
+
+		.swal-button--cancel:active {
+			background-color: #d7d7d7
+		}
+
+		.swal-button--cancel:focus {
+			box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, .29)
+		}
+
+		.swal-button--danger {
+			background-color: #e64942
+		}
+
+		.swal-button--danger:not([disabled]):hover {
+			background-color: #df4740
+		}
+
+		.swal-button--danger:active {
+			background-color: #cf423b
+		}
+
+		.swal-button--danger:focus {
+			box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 43, 43, .29)
+		}
+
+		.swal-content {
+			padding: 0 20px;
+			margin-top: 20px;
+			font-size: medium
+		}
+
+		.swal-content:last-child {
+			margin-bottom: 20px
+		}
+
+		.swal-content__input,
+		.swal-content__textarea {
+			-webkit-appearance: none;
+			background-color: #fff;
+			border: none;
+			font-size: 14px;
+			display: block;
+			box-sizing: border-box;
+			width: 100%;
+			border: 1px solid rgba(0, 0, 0, .14);
+			padding: 10px 13px;
+			border-radius: 2px;
+			transition: border-color .2s
+		}
+
+		.swal-content__input:focus,
+		.swal-content__textarea:focus {
+			outline: none;
+			border-color: #6db8ff
+		}
+
+		.swal-content__textarea {
+			resize: vertical
+		}
+
+		.swal-button--loading {
+			color: transparent
+		}
+
+		.swal-button--loading~.swal-button__loader {
+			opacity: 1
+		}
+
+		.swal-button__loader {
+			position: absolute;
+			height: auto;
+			width: 43px;
+			z-index: 2;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+			text-align: center;
+			pointer-events: none;
+			opacity: 0
+		}
+
+		.swal-button__loader div {
+			display: inline-block;
+			float: none;
+			vertical-align: baseline;
+			width: 9px;
+			height: 9px;
+			padding: 0;
+			border: none;
+			margin: 2px;
+			opacity: .4;
+			border-radius: 7px;
+			background-color: hsla(0, 0%, 100%, .9);
+			transition: background .2s;
+			-webkit-animation: swal-loading-anim 1s infinite;
+			animation: swal-loading-anim 1s infinite
+		}
+
+		.swal-button__loader div:nth-child(3n+2) {
+			-webkit-animation-delay: .15s;
+			animation-delay: .15s
+		}
+
+		.swal-button__loader div:nth-child(3n+3) {
+			-webkit-animation-delay: .3s;
+			animation-delay: .3s
+		}
+
+		@-webkit-keyframes swal-loading-anim {
+			0% {
+				opacity: .4
+			}
+
+			20% {
+				opacity: .4
+			}
+
+			50% {
+				opacity: 1
+			}
+
+			to {
+				opacity: .4
+			}
+		}
+
+		@keyframes swal-loading-anim {
+			0% {
+				opacity: .4
+			}
+
+			20% {
+				opacity: .4
+			}
+
+			50% {
+				opacity: 1
+			}
+
+			to {
+				opacity: .4
+			}
+		}
+
+		.swal-overlay {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			font-size: 0;
+			overflow-y: auto;
+			background-color: rgba(0, 0, 0, .4);
+			z-index: 10000;
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity .3s
+		}
+
+		.swal-overlay:before {
+			content: " ";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%
+		}
+
+		.swal-overlay--show-modal {
+			opacity: 1;
+			pointer-events: auto
+		}
+
+		.swal-overlay--show-modal .swal-modal {
+			opacity: 1;
+			pointer-events: auto;
+			box-sizing: border-box;
+			-webkit-animation: showSweetAlert .3s;
+			animation: showSweetAlert .3s;
+			will-change: transform
+		}
+
+		.swal-modal {
+			width: 478px;
+			opacity: 0;
+			pointer-events: none;
+			background-color: #fff;
+			text-align: center;
+			border-radius: 5px;
+			position: static;
+			margin: 20px auto;
+			display: inline-block;
+			vertical-align: middle;
+			-webkit-transform: scale(1);
+			transform: scale(1);
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			z-index: 10001;
+			transition: opacity .2s, -webkit-transform .3s;
+			transition: transform .3s, opacity .2s;
+			transition: transform .3s, opacity .2s, -webkit-transform .3s
+		}
+
+		@media (max-width:500px) {
+			.swal-modal {
+				width: calc(100% - 20px)
+			}
+		}
+
+		@-webkit-keyframes showSweetAlert {
+			0% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+
+			1% {
+				-webkit-transform: scale(.5);
+				transform: scale(.5)
+			}
+
+			45% {
+				-webkit-transform: scale(1.05);
+				transform: scale(1.05)
+			}
+
+			80% {
+				-webkit-transform: scale(.95);
+				transform: scale(.95)
+			}
+
+			to {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+
+		@keyframes showSweetAlert {
+			0% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+
+			1% {
+				-webkit-transform: scale(.5);
+				transform: scale(.5)
+			}
+
+			45% {
+				-webkit-transform: scale(1.05);
+				transform: scale(1.05)
+			}
+
+			80% {
+				-webkit-transform: scale(.95);
+				transform: scale(.95)
+			}
+
+			to {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+	</style>
 	<meta charset="UTF-8">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<title>Payment and Tracking - Yafanew Enterprises</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- This site is optimized with the Yoast SEO plugin v11.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
-<link rel="canonical" href="https://yafanew.com/payment-tracking/">
-<meta property="og:locale" content="en_US">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Payment and Tracking - Yafanew Enterprises">
-<meta property="og:description" content="Payment Tracking Make Payment Track Order If you are a new user, please email us at support@yafanew.com to generate your credentials">
-<meta property="og:url" content="https://yafanew.com/payment-tracking/">
-<meta property="og:site_name" content="Yafanew Enterprises">
-<meta property="og:image" content="https://yafanew.com/wp-content/uploads/2020/07/Credit-Card-Icons-300x213.jpg">
-<meta property="og:image:secure_url" content="https://yafanew.com/wp-content/uploads/2020/07/Credit-Card-Icons-300x213.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:description" content="Payment Tracking Make Payment Track Order If you are a new user, please email us at support@yafanew.com to generate your credentials">
-<meta name="twitter:title" content="Payment and Tracking - Yafanew Enterprises">
-<meta name="twitter:image" content="https://yafanew.com/wp-content/uploads/2020/07/Credit-Card-Icons-300x213.jpg">
-<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://yafanew.com/#organization","name":"Yafanew Enterprises","url":"https://yafanew.com/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://yafanew.com/#logo","url":"https://yafanew.com/wp-content/uploads/2019/05/yafanew-enterprises-logo.png","width":666,"height":250,"caption":"Yafanew Enterprises"},"image":{"@id":"https://yafanew.com/#logo"}},{"@type":"WebSite","@id":"https://yafanew.com/#website","url":"https://yafanew.com/","name":"Yafanew Enterprises","publisher":{"@id":"https://yafanew.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://yafanew.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://yafanew.com/payment-tracking/#webpage","url":"https://yafanew.com/payment-tracking/","inLanguage":"en-US","name":"Payment and Tracking - Yafanew Enterprises","isPartOf":{"@id":"https://yafanew.com/#website"},"image":{"@type":"ImageObject","@id":"https://yafanew.com/payment-tracking/#primaryimage","url":"https://yafanew.com/wp-content/uploads/2020/07/Credit-Card-Icons.jpg","width":537,"height":381},"primaryImageOfPage":{"@id":"https://yafanew.com/payment-tracking/#primaryimage"},"datePublished":"2020-07-10T15:02:07+00:00","dateModified":"2020-07-16T11:33:15+00:00"}]}</script>
-<!-- / Yoast SEO plugin. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- This site is optimized with the Yoast SEO plugin v11.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<link rel="canonical" href="/payment-tracking.html">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Payment and Tracking - Yafanew Enterprises">
+	<meta property="og:description"
+		content="Payment Tracking Make Payment Track Order If you are a new user, please email us at support@yafanew.com to generate your credentials">
+	<meta property="og:url" content="/payment-tracking.html">
+	<meta property="og:site_name" content="Yafanew Enterprises">
+	<meta property="og:image" content="https://yafanew.com/img/Credit-Card-Icons-300x213.jpg">
+	<meta property="og:image:secure_url"
+		content="https://yafanew.com/img/Credit-Card-Icons-300x213.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:description"
+		content="Payment Tracking Make Payment Track Order If you are a new user, please email us at support@yafanew.com to generate your credentials">
+	<meta name="twitter:title" content="Payment and Tracking - Yafanew Enterprises">
+	<meta name="twitter:image" content="https://yafanew.com/img/Credit-Card-Icons-300x213.jpg">
+	<script type="application/ld+json"
+		class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://yafanew.com/#organization","name":"Yafanew Enterprises","url":"https://yafanew.com/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://yafanew.com/#logo","url":"/img/yafanew-enterprises-logo.png","width":666,"height":250,"caption":"Yafanew Enterprises"},"image":{"@id":"https://yafanew.com/#logo"}},{"@type":"WebSite","@id":"https://yafanew.com/#website","url":"https://yafanew.com/","name":"Yafanew Enterprises","publisher":{"@id":"https://yafanew.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://yafanew.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"/payment-tracking.html#webpage","url":"/payment-tracking.html","inLanguage":"en-US","name":"Payment and Tracking - Yafanew Enterprises","isPartOf":{"@id":"https://yafanew.com/#website"},"image":{"@type":"ImageObject","@id":"/payment-tracking.html#primaryimage","url":"img/Credit-Card-Icons.jpg","width":537,"height":381},"primaryImageOfPage":{"@id":"/payment-tracking.html#primaryimage"},"datePublished":"2020-07-10T15:02:07+00:00","dateModified":"2020-07-16T11:33:15+00:00"}]}</script>
+	<!-- / Yoast SEO plugin. -->
 
-<link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
-<link rel="alternate" type="application/rss+xml" title="Yafanew Enterprises » Feed" href="https://yafanew.com/feed/">
-<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
+	<link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
+	<style type="text/css">
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 .07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
 	<link rel="stylesheet" id="font-awesome-css" href="css/font-awesome.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="simple-line-icons-css" href="css/simple-line-icons.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="magnific-popup-css" href="css/magnific-popup.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="slick-css" href="css/slick.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="oceanwp-style-css" href="css/style.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-animations-css" href="css/animations.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-frontend-legacy-css" href="css/frontend-legacy.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-frontend-css" href="css/frontend.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-post-168-css" href="css/post-168.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-global-css" href="css/global.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-post-121-css" href="css/post-121.css" type="text/css" media="all">
-<link rel="stylesheet" id="oe-widgets-style-css" href="css/widgets.css" type="text/css" media="all">
-<link rel="stylesheet" id="google-fonts-1-css" href="css/css_1.css" type="text/css" media="all">
-<script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
-<script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
-<link rel="https://api.w.org/" href="https://yafanew.com/wp-json/"><link rel="alternate" type="application/json" href="https://yafanew.com/wp-json/wp/v2/pages/121"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://yafanew.com/xmlrpc.php?rsd">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://yafanew.com/wp-includes/wlwmanifest.xml"> 
-<meta name="generator" content="WordPress 5.6.2">
-<link rel="shortlink" href="https://yafanew.com/?p=121">
-<link rel="alternate" type="application/json+oembed" href="https://yafanew.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fyafanew.com%2Fpayment-tracking%2F">
-<link rel="alternate" type="text/xml+oembed" href="https://yafanew.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fyafanew.com%2Fpayment-tracking%2F&amp;format=xml">
-<link rel="icon" href="https://yafanew.com/wp-content/uploads/2019/05/yafanew-enterprises-favicon.png" sizes="32x32">
-<link rel="icon" href="https://yafanew.com/wp-content/uploads/2019/05/yafanew-enterprises-favicon.png" sizes="192x192">
-<link rel="apple-touch-icon" href="https://yafanew.com/wp-content/uploads/2019/05/yafanew-enterprises-favicon.png">
-<meta name="msapplication-TileImage" content="https://yafanew.com/wp-content/uploads/2019/05/yafanew-enterprises-favicon.png">
-<!-- OceanWP CSS -->
-<style type="text/css">
-/* Header CSS */#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:200px}
-</style><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+	<link rel="stylesheet" id="simple-line-icons-css" href="css/simple-line-icons.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="magnific-popup-css" href="css/magnific-popup.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="slick-css" href="css/slick.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="oceanwp-style-css" href="css/style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="elementor-icons-css" href="css/elementor-icons.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="elementor-animations-css" href="css/animations.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="elementor-frontend-legacy-css" href="css/frontend-legacy.min.css" type="text/css"
+		media="all">
+	<link rel="stylesheet" id="elementor-frontend-css" href="css/frontend.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="elementor-post-168-css" href="css/post-168.css" type="text/css" media="all">
+	<link rel="stylesheet" id="elementor-global-css" href="css/global.css" type="text/css" media="all">
+	<link rel="stylesheet" id="elementor-post-121-css" href="css/post-121.css" type="text/css" media="all">
+	<link rel="stylesheet" id="oe-widgets-style-css" href="css/widgets.css" type="text/css" media="all">
+	<link rel="stylesheet" id="google-fonts-1-css" href="css/css_1.css" type="text/css" media="all">
+	<script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
+	<script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+	<link rel="icon" href="./img/yafanew-enterprises-favicon.png" sizes="32x32">
+	<link rel="icon" href="./img/yafanew-enterprises-favicon.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="./img/yafanew-enterprises-favicon.png">
+	<meta name="msapplication-TileImage" content="./img/yafanew-enterprises-favicon.png">
+	<!-- OceanWP CSS -->
+	<style type="text/css">
+		/* Header CSS */
+		#site-header.has-header-media .overlay-header-media {
+			background-color: rgba(0, 0, 0, 0.5)
+		}
 
-<body class="page-template page-template-elementor_header_footer page page-id-121 wp-custom-logo wp-embed-responsive oceanwp-theme sidebar-mobile default-breakpoint has-sidebar content-right-sidebar has-topbar has-breadcrumbs elementor-default elementor-template-full-width elementor-kit-168 elementor-page elementor-page-121" data-elementor-device-mode="tablet">
+		#site-logo #site-logo-inner a img,
+		#site-header.center-header #site-navigation-wrap .middle-site-logo a img {
+			max-width: 200px
+		}
+	</style>
+	<style id="fit-vids-style">
+		.fluid-width-video-wrapper {
+			width: 100%;
+			position: relative;
+			padding: 0;
+		}
 
-	
+		.fluid-width-video-wrapper iframe,
+		.fluid-width-video-wrapper object,
+		.fluid-width-video-wrapper embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body
+	class="page-template page-template-elementor_header_footer page page-id-121 wp-custom-logo wp-embed-responsive oceanwp-theme sidebar-mobile default-breakpoint has-sidebar content-right-sidebar has-topbar has-breadcrumbs elementor-default elementor-template-full-width elementor-kit-168 elementor-page elementor-page-121"
+	data-elementor-device-mode="tablet">
+
+
 	<div id="outer-wrap" class="site clr">
 
-		
+
 		<div id="wrap" class="clr">
 
-			
-
-<div id="top-bar-wrap" class="clr">
-
-	<div id="top-bar" class="clr container has-no-content">
-
-		
-		<div id="top-bar-inner" class="clr">
-
-			
-
-		</div><!-- #top-bar-inner -->
-
-		
-	</div><!-- #top-bar -->
-
-</div><!-- #top-bar-wrap -->
 
 
-			
-<header id="site-header" class="minimal-header clr" data-height="74" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div id="top-bar-wrap" class="clr">
 
-	
-		
-			
-			<div id="site-header-inner" class="clr container">
+				<div id="top-bar" class="clr container has-no-content">
 
-				
-				
 
-<div id="site-logo" class="clr" itemscope itemtype="http://schema.org/Brand">
+					<div id="top-bar-inner" class="clr">
 
-	
-	<div id="site-logo-inner" class="clr">
 
-		<a href="https://yafanew.com/" class="custom-logo-link" rel="home"><img width="666" height="250" src="img/yafanew-enterprises-logo.png" class="custom-logo" alt="yafanew enterprises logo" srcset="https://yafanew.com/wp-content/uploads/2019/05/yafanew-enterprises-logo.png 1x, https://yafanew.com/wp-content/uploads/2019/05/yafanew-enterprises-logo.png 2x"></a>
-	</div><!-- #site-logo-inner -->
 
-	
-	
-</div><!-- #site-logo -->
+					</div><!-- #top-bar-inner -->
 
-			<div id="site-navigation-wrap" class="clr">
-		
-			
-			
-			<nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 
-				<ul id="menu-fas" class="main-menu dropdown-menu sf-menu sf-js-enabled" style="touch-action: pan-y;"><li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-54"><a href="https://yafanew.com/" class="menu-link"><span class="text-wrap">Home</span></a></li><li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a href="https://yafanew.com/about-us/" class="menu-link"><span class="text-wrap">About Us</span></a></li><li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a href="https://yafanew.com/brands/" class="menu-link"><span class="text-wrap">Brands</span></a></li><li id="menu-item-133" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-121 current_page_item menu-item-133"><a href="https://yafanew.com/payment-tracking/" class="menu-link"><span class="text-wrap">Payment and Tracking</span></a></li><li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57"><a href="https://yafanew.com/contact-us/" class="menu-link"><span class="text-wrap">Contact Us</span></a></li></ul>
-			</nav><!-- #site-navigation -->
+				</div><!-- #top-bar -->
 
-			
-			
+			</div><!-- #top-bar-wrap -->
+
+
+
+			<header id="site-header" class="minimal-header clr" data-height="74" itemscope="itemscope"
+				itemtype="http://schema.org/WPHeader">
+
+
+
+
+				<div id="site-header-inner" class="clr container">
+
+
+
+
+					<div id="site-logo" class="clr" itemscope itemtype="http://schema.org/Brand">
+
+
+						<div id="site-logo-inner" class="clr">
+
+							<a href="/" class="custom-logo-link" rel="home"><img width="666"
+									height="250" src="img/yafanew-enterprises-logo.png" class="custom-logo"
+									alt="yafanew enterprises logo"
+									srcset="/img/yafanew-enterprises-logo.png 1x, /img/yafanew-enterprises-logo.png 2x"></a>
+						</div><!-- #site-logo-inner -->
+
+
+
+					</div><!-- #site-logo -->
+
+					<div id="site-navigation-wrap" class="clr">
+
+
+
+						<nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope"
+							itemtype="http://schema.org/SiteNavigationElement">
+
+							<ul id="menu-fas" class="main-menu dropdown-menu sf-menu sf-js-enabled"
+								style="touch-action: pan-y;">
+								<li id="menu-item-54"
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-54">
+									<a href="/" class="menu-link"><span
+											class="text-wrap">Home</span></a></li>
+								<li id="menu-item-55"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a
+										href="/about-us.html" class="menu-link"><span
+											class="text-wrap">About Us</span></a></li>
+								<li id="menu-item-56"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a
+										href="/brands.html" class="menu-link"><span
+											class="text-wrap">Brands</span></a></li>
+								<li id="menu-item-133"
+									class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-121 current_page_item menu-item-133">
+									<a href="/payment-tracking.html" class="menu-link"><span class="text-wrap">Payment
+											and Tracking</span></a></li>
+								<li id="menu-item-57"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57"><a
+										href="/contact-us.html" class="menu-link"><span class="text-wrap">Contact
+											Us</span></a></li>
+							</ul>
+						</nav><!-- #site-navigation -->
+
+
+
 					</div><!-- #site-navigation-wrap -->
-		
-		
-	
-				
-	<div class="oceanwp-mobile-menu-icon clr mobile-right">
 
-		
-		
-		
-		<a href="#" class="mobile-menu">
+
+
+
+					<div class="oceanwp-mobile-menu-icon clr mobile-right">
+
+
+
+
+						<a href="#" class="mobile-menu">
 							<i class="fa fa-bars"></i>
 							<span class="oceanwp-text">Menu</span>
 
 						</a>
 
-		
-		
-		
-	</div><!-- #oceanwp-mobile-menu-navbar -->
 
 
-			</div><!-- #site-header-inner -->
 
-			
-			
-		
-				
-	
-</header><!-- #site-header -->
+					</div><!-- #oceanwp-mobile-menu-navbar -->
 
 
-						
+				</div><!-- #site-header-inner -->
+
+
+
+
+
+
+			</header><!-- #site-header -->
+
+
+
 			<main id="main" class="site-main clr">
 
-				
 
-<header class="page-header">
 
-	
-	<div class="container clr page-header-inner">
+				<header class="page-header">
 
-		
-			<h1 class="page-header-title clr" itemprop="headline">Payment and Tracking</h1>
 
-			
-		
-		<nav aria-label="Breadcrumbs" class="site-breadcrumbs clr" itemprop="breadcrumb"><ol class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList"><meta name="numberOfItems" content="2"><meta name="itemListOrder" content="Ascending"><li class="trail-item trail-begin" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://yafanew.com" rel="home" aria-label="Home" itemtype="http://schema.org/Thing" itemprop="item"><span itemprop="name"><span class="icon-home"></span><span class="breadcrumb-home has-icon">Home</span></span></a><span class="breadcrumb-sep">&gt;</span><meta content="1" itemprop="position"></li><li class="trail-item trail-end" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://yafanew.com/payment-tracking/" itemtype="http://schema.org/Thing" itemprop="item"><span itemprop="name">Payment and Tracking</span></a><meta content="2" itemprop="position"></li></ol></nav>
-	</div><!-- .page-header-inner -->
+					<div class="container clr page-header-inner">
 
-	
-	
-</header><!-- .page-header -->
 
-		<div data-elementor-type="wp-post" data-elementor-id="121" class="elementor elementor-121" data-elementor-settings="[]">
-						<div class="elementor-inner">
-							<div class="elementor-section-wrap">
-							<section class="elementor-section elementor-top-section elementor-element elementor-element-05fa774 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="05fa774" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-							<div class="elementor-row">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e3f9e6f" data-id="e3f9e6f" data-element_type="column">
-			<div class="elementor-column-wrap elementor-element-populated">
-							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-00dcae8 elementor-widget elementor-widget-heading" data-id="00dcae8" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h3 class="elementor-heading-title elementor-size-large">Payment</h3>		</div>
-				</div>
-						</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-448a928" data-id="448a928" data-element_type="column">
-			<div class="elementor-column-wrap elementor-element-populated">
-							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-367f476 elementor-widget elementor-widget-heading" data-id="367f476" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h3 class="elementor-heading-title elementor-size-large">Tracking</h3>		</div>
-				</div>
-						</div>
-					</div>
-		</div>
+						<h1 class="page-header-title clr" itemprop="headline">Payment and Tracking</h1>
+
+
+
+						<nav aria-label="Breadcrumbs" class="site-breadcrumbs clr" itemprop="breadcrumb">
+							<ol class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList">
+								<meta name="numberOfItems" content="2">
+								<meta name="itemListOrder" content="Ascending">
+								<li class="trail-item trail-begin" itemprop="itemListElement" itemscope
+									itemtype="http://schema.org/ListItem"><a href="https://yafanew.com" rel="home"
+										aria-label="Home" itemtype="http://schema.org/Thing" itemprop="item"><span
+											itemprop="name"><span class="icon-home"></span><span
+												class="breadcrumb-home has-icon">Home</span></span></a><span
+										class="breadcrumb-sep">&gt;</span>
+									<meta content="1" itemprop="position">
+								</li>
+								<li class="trail-item trail-end" itemprop="itemListElement" itemscope
+									itemtype="http://schema.org/ListItem"><a href="/payment-tracking.html"
+										itemtype="http://schema.org/Thing" itemprop="item"><span itemprop="name">Payment
+											and Tracking</span></a>
+									<meta content="2" itemprop="position">
+								</li>
+							</ol>
+						</nav>
+					</div><!-- .page-header-inner -->
+
+
+
+				</header><!-- .page-header -->
+
+				<div data-elementor-type="wp-post" data-elementor-id="121" class="elementor elementor-121"
+					data-elementor-settings="[]">
+					<div class="elementor-inner">
+						<div class="elementor-section-wrap">
+							<section
+								class="elementor-section elementor-top-section elementor-element elementor-element-05fa774 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+								data-id="05fa774" data-element_type="section">
+								<div class="elementor-container elementor-column-gap-default">
+									<div class="elementor-row">
+										<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e3f9e6f"
+											data-id="e3f9e6f" data-element_type="column">
+											<div class="elementor-column-wrap elementor-element-populated">
+												<div class="elementor-widget-wrap">
+													<div class="elementor-element elementor-element-00dcae8 elementor-widget elementor-widget-heading"
+														data-id="00dcae8" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h3 class="elementor-heading-title elementor-size-large">
+																Payment</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-448a928"
+											data-id="448a928" data-element_type="column">
+											<div class="elementor-column-wrap elementor-element-populated">
+												<div class="elementor-widget-wrap">
+													<div class="elementor-element elementor-element-367f476 elementor-widget elementor-widget-heading"
+														data-id="367f476" data-element_type="widget"
+														data-widget_type="heading.default">
+														<div class="elementor-widget-container">
+															<h3 class="elementor-heading-title elementor-size-large">
+																Tracking</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-1130dd7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1130dd7" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-							<div class="elementor-row">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7a79b2c" data-id="7a79b2c" data-element_type="column">
-			<div class="elementor-column-wrap elementor-element-populated">
-							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-5c9f37d elementor-widget elementor-widget-html" data-id="5c9f37d" data-element_type="widget" data-widget_type="html.default">
-				<div class="elementor-widget-container">
-			
-<input style="width: 100%; border: 1px solid #ddd;    border-radius: 3px; margin-bottom: 10px;display: inline-block;padding: 6px 12px;" placeholder="PO#" type="number" id="po">
+							</section>
+							<section
+								class="elementor-section elementor-top-section elementor-element elementor-element-1130dd7 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+								data-id="1130dd7" data-element_type="section">
+								<div class="elementor-container elementor-column-gap-default">
+									<div class="elementor-row">
+										<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7a79b2c"
+											data-id="7a79b2c" data-element_type="column">
+											<div class="elementor-column-wrap elementor-element-populated">
+												<div class="elementor-widget-wrap">
+													<div class="elementor-element elementor-element-5c9f37d elementor-widget elementor-widget-html"
+														data-id="5c9f37d" data-element_type="widget"
+														data-widget_type="html.default">
+														<div class="elementor-widget-container">
 
-<input style="width: 100%; border: 1px solid #ddd;    border-radius: 3px; margin-bottom: 10px;display: inline-block;padding: 6px 12px;" placeholder="Password" type="password" id="password">
+															<input
+																style="width: 100%; border: 1px solid #ddd;    border-radius: 3px; margin-bottom: 10px;display: inline-block;padding: 6px 12px;"
+																placeholder="PO#" type="number" id="po">
 
-<input style="width: 100%; border: 1px solid #ddd;    border-radius: 3px; margin-bottom: 10px;display: inline-block;padding: 6px 12px;" placeholder="Due Amount" type="number" id="dueAmount">
+															<input
+																style="width: 100%; border: 1px solid #ddd;    border-radius: 3px; margin-bottom: 10px;display: inline-block;padding: 6px 12px;"
+																placeholder="Password" type="password" id="password">
 
-		</div>
-				</div>
-						</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3c9df2f" data-id="3c9df2f" data-element_type="column">
-			<div class="elementor-column-wrap elementor-element-populated">
-							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-c7475ca elementor-widget elementor-widget-html" data-id="c7475ca" data-element_type="widget" data-widget_type="html.default">
-				<div class="elementor-widget-container">
-			<input style="width: 100%; border: 1px solid #ddd;    border-radius: 3px; margin-bottom: 10px;display: inline-block;padding: 6px 12px;" placeholder="Tracking Number" id="trackingNumber">
-		</div>
-				</div>
-						</div>
-					</div>
-		</div>
+															<input
+																style="width: 100%; border: 1px solid #ddd;    border-radius: 3px; margin-bottom: 10px;display: inline-block;padding: 6px 12px;"
+																placeholder="Due Amount" type="number" id="dueAmount">
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3c9df2f"
+											data-id="3c9df2f" data-element_type="column">
+											<div class="elementor-column-wrap elementor-element-populated">
+												<div class="elementor-widget-wrap">
+													<div class="elementor-element elementor-element-c7475ca elementor-widget elementor-widget-html"
+														data-id="c7475ca" data-element_type="widget"
+														data-widget_type="html.default">
+														<div class="elementor-widget-container">
+															<input
+																style="width: 100%; border: 1px solid #ddd;    border-radius: 3px; margin-bottom: 10px;display: inline-block;padding: 6px 12px;"
+																placeholder="Tracking Number" id="trackingNumber">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-11d6e1a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="11d6e1a" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-							<div class="elementor-row">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0cdd73a" data-id="0cdd73a" data-element_type="column">
-			<div class="elementor-column-wrap elementor-element-populated">
-							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-bc2d8c7 elementor-widget elementor-widget-button" data-id="bc2d8c7" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-button-wrapper">
-			<a class="elementor-button elementor-size-sm" role="button" id="make-payment">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-text">Make Payment</span>
-		</span>
-					</a>
-		</div>
-				</div>
-				</div>
-						</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-23cc0a8" data-id="23cc0a8" data-element_type="column">
-			<div class="elementor-column-wrap elementor-element-populated">
-							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-56738dd elementor-widget elementor-widget-button" data-id="56738dd" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-button-wrapper">
-			<a class="elementor-button elementor-size-sm" role="button" id="track-order">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-text">Track Order</span>
-		</span>
-					</a>
-		</div>
-				</div>
-				</div>
-						</div>
-					</div>
-		</div>
+							</section>
+							<section
+								class="elementor-section elementor-top-section elementor-element elementor-element-11d6e1a elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+								data-id="11d6e1a" data-element_type="section">
+								<div class="elementor-container elementor-column-gap-default">
+									<div class="elementor-row">
+										<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0cdd73a"
+											data-id="0cdd73a" data-element_type="column">
+											<div class="elementor-column-wrap elementor-element-populated">
+												<div class="elementor-widget-wrap">
+													<div class="elementor-element elementor-element-bc2d8c7 elementor-widget elementor-widget-button"
+														data-id="bc2d8c7" data-element_type="widget"
+														data-widget_type="button.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-button-wrapper">
+																<a class="elementor-button elementor-size-sm"
+																	role="button" id="make-payment">
+																	<span class="elementor-button-content-wrapper">
+																		<span class="elementor-button-text">Make
+																			Payment</span>
+																	</span>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-23cc0a8"
+											data-id="23cc0a8" data-element_type="column">
+											<div class="elementor-column-wrap elementor-element-populated">
+												<div class="elementor-widget-wrap">
+													<div class="elementor-element elementor-element-56738dd elementor-widget elementor-widget-button"
+														data-id="56738dd" data-element_type="widget"
+														data-widget_type="button.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-button-wrapper">
+																<a class="elementor-button elementor-size-sm"
+																	role="button" id="track-order">
+																	<span class="elementor-button-content-wrapper">
+																		<span class="elementor-button-text">Track
+																			Order</span>
+																	</span>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-f235de6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f235de6" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-							<div class="elementor-row">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-eac7109" data-id="eac7109" data-element_type="column">
-			<div class="elementor-column-wrap elementor-element-populated">
-							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-f6f9dc0 elementor-widget elementor-widget-image" data-id="f6f9dc0" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-image">
-							<figure class="wp-caption">
-										<img width="300" height="213" src="img/Credit-Card-Icons-300x213.jpg" class="attachment-medium size-medium" alt loading="lazy" srcset="https://yafanew.com/wp-content/uploads/2020/07/Credit-Card-Icons-300x213.jpg 300w, https://yafanew.com/wp-content/uploads/2020/07/Credit-Card-Icons.jpg 537w" sizes="(max-width: 300px) 100vw, 300px">											<figcaption class="widget-image-caption wp-caption-text"> If you are a new user, please email us at support@yafanew.com to generate your credentials</figcaption>
-										</figure>
-					</div>
-				</div>
-				</div>
-						</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2b4f6be" data-id="2b4f6be" data-element_type="column">
-			<div class="elementor-column-wrap elementor-element-populated">
-							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-edc7f5d elementor-widget elementor-widget-html" data-id="edc7f5d" data-element_type="widget" data-widget_type="html.default">
-				<div class="elementor-widget-container">
-			<script>
-    document.getElementById("track-order").addEventListener("click", function() {
-let enteredNumber = document.getElementById("trackingNumber").value;
-    let num = Number(enteredNumber)/7;
-    let result = num - Math.floor(num) != 0 ? false : true
-    console.log(result);
-    if(enteredNumber == ""){
-        swal("Please enter the tracking number")
-    }
-    else {
-        if(result){
-            swal("Order is shipped");
-        }
-        else{
-            swal("Invalid Tracking#");
-        }
-    }
-});
+							</section>
+							<section
+								class="elementor-section elementor-top-section elementor-element elementor-element-f235de6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+								data-id="f235de6" data-element_type="section">
+								<div class="elementor-container elementor-column-gap-default">
+									<div class="elementor-row">
+										<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-eac7109"
+											data-id="eac7109" data-element_type="column">
+											<div class="elementor-column-wrap elementor-element-populated">
+												<div class="elementor-widget-wrap">
+													<div class="elementor-element elementor-element-f6f9dc0 elementor-widget elementor-widget-image"
+														data-id="f6f9dc0" data-element_type="widget"
+														data-widget_type="image.default">
+														<div class="elementor-widget-container">
+															<div class="elementor-image">
+																<figure class="wp-caption">
+																	<img width="300" height="213"
+																		src="img/Credit-Card-Icons-300x213.jpg"
+																		class="attachment-medium size-medium" alt
+																		loading="lazy"
+																		srcset="/img/Credit-Card-Icons-300x213.jpg 300w, img/Credit-Card-Icons.jpg 537w"
+																		sizes="(max-width: 300px) 100vw, 300px">
+																	<figcaption
+																		class="widget-image-caption wp-caption-text"> If
+																		you are a new user, please email us at
+																		support@yafanew.com to generate your credentials
+																	</figcaption>
+																</figure>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2b4f6be"
+											data-id="2b4f6be" data-element_type="column">
+											<div class="elementor-column-wrap elementor-element-populated">
+												<div class="elementor-widget-wrap">
+													<div class="elementor-element elementor-element-edc7f5d elementor-widget elementor-widget-html"
+														data-id="edc7f5d" data-element_type="widget"
+														data-widget_type="html.default">
+														<div class="elementor-widget-container">
+															<script>
+																document.getElementById("track-order").addEventListener("click", function () {
+																	let enteredNumber = document.getElementById("trackingNumber").value;
+																	let num = Number(enteredNumber) / 7;
+																	let result = num - Math.floor(num) != 0 ? false : true
+																	console.log(result);
+																	if (enteredNumber == "") {
+																		swal("Please enter the tracking number")
+																	}
+																	else {
+																		if (result) {
+																			swal("Order is shipped");
+																		}
+																		else {
+																			swal("Invalid Tracking#");
+																		}
+																	}
+																});
 
-</script>
-<script src="js/sweetalert.min.js"></script>
-<script>
-    document.getElementById("make-payment").addEventListener("click", function() {
-let dueAmount = document.getElementById("dueAmount").value;
-        let po = document.getElementById("po")
-        let password = document.getElementById("password").value;
-        if(dueAmount !="" && po !="" && password!=""){
-            swal('Enter the correct PO# and Password').value;
-        }
-        else {
-            swal("Fill all the values")
-        }
-});
-</script>		</div>
-				</div>
-						</div>
-					</div>
-		</div>
+															</script>
+															<script src="js/sweetalert.min.js"></script>
+															<script>
+																document.getElementById("make-payment").addEventListener("click", function () {
+																	let dueAmount = document.getElementById("dueAmount").value;
+																	let po = document.getElementById("po")
+																	let password = document.getElementById("password").value;
+																	if (dueAmount != "" && po != "" && password != "") {
+																		swal('Enter the correct PO# and Password').value;
+																	}
+																	else {
+																		swal("Fill all the values")
+																	}
+																});
+															</script>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-					</div>
-		</section>
-						</div>
+							</section>
 						</div>
 					</div>
-		
-        </main><!-- #main -->
+				</div>
 
-        
-        
-        
-            
-<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			</main><!-- #main -->
 
-    
-    <div id="footer-inner" class="clr">
 
-        
 
-<div id="footer-widgets" class="oceanwp-row clr">
 
-	
-	<div class="footer-widgets-inner container">
 
-        			<div class="footer-box span_1_of_4 col col-1">
+			<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+
+
+				<div id="footer-inner" class="clr">
+
+
+
+					<div id="footer-widgets" class="oceanwp-row clr">
+
+
+						<div class="footer-widgets-inner container">
+
+							<div class="footer-box span_1_of_4 col col-1">
 							</div><!-- .footer-one-box -->
 
 							<div class="footer-box span_1_of_4 col col-2">
-									</div><!-- .footer-one-box -->
-						
+							</div><!-- .footer-one-box -->
+
 							<div class="footer-box span_1_of_4 col col-3 ">
-									</div><!-- .footer-one-box -->
-			
+							</div><!-- .footer-one-box -->
+
 							<div class="footer-box span_1_of_4 col col-4">
-									</div><!-- .footer-box -->
-			
-		
-	</div><!-- .container -->
-
-	
-</div><!-- #footer-widgets -->
+							</div><!-- .footer-box -->
 
 
+						</div><!-- .container -->
 
-<div id="footer-bottom" class="clr">
 
-	
-	<div id="footer-bottom-inner" class="container clr">
-<p style="float:left;">
-				Copyright <script>document.write(new Date().getFullYear());</script>2021©- Yafanew Enterprises	
-				</p>
-		
-			<div id="footer-bottom-menu" class="navigation clr">
-				
-				<div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="https://yafanew.com/privacy-policy/">Privacy Policy</a></li>
-<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="https://yafanew.com/terms-and-conditions/">Terms And Conditions</a></li>
-<li id="menu-item-112" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-112"><a href="https://www.facebook.com/YafanewEnterprises/">Facebook</a></li>
-<li id="menu-item-113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113"><a href="https://www.reddit.com/user/YafanewEnterprises/">Reddit</a></li>
-<li id="menu-item-114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114"><a href="https://www.pinterest.com/YafanewEnterprises/">Pinterest</a></li>
-<li id="menu-item-115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-115"><a href="https://medium.com/@YafanewEnterprises">Medium</a></li>
-<li id="menu-item-116" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-116"><a href="https://www.youtube.com/channel/UCEIvPa7uoois_YqEeZGQEhA">Youtube</a></li>
-</ul></div>				
-			</div><!-- #footer-bottom-menu -->
-
-		
-		
-	</div><!-- #footer-bottom-inner -->
-
-	
-</div><!-- #footer-bottom -->
-
-        
-    </div><!-- #footer-inner -->
-
-    
-</footer><!-- #footer -->            
-        
-                        
-    </div><!-- #wrap -->
-
-    
-</div><!-- #outer-wrap -->
+					</div><!-- #footer-widgets -->
 
 
 
-<a id="scroll-top" class="scroll-top-right" href="#"><span class="fa fa-angle-up"></span></a>
+					<div id="footer-bottom" class="clr">
 
 
-<div id="sidr-close">
-	<a href="#" class="toggle-sidr-close">
-		<i class="icon icon-close"></i><span class="close-text">Close Menu</span>
-	</a>
-</div>
-    
-    
-<div id="mobile-menu-search" class="clr">
-	<form method="get" action="https://yafanew.com/" class="mobile-searchform">
-		<input type="search" name="s" autocomplete="off" placeholder="Search">
-		<button type="submit" class="searchform-submit">
-			<i class="icon icon-magnifier"></i>
-		</button>
+						<div id="footer-bottom-inner" class="container clr">
+							<p style="float:left;">
+								Copyright
+								<script>document.write(new Date().getFullYear());</script>©- Yafanew Enterprises
+							</p>
+
+							<div id="footer-bottom-menu" class="navigation clr">
+
+								<div class="menu-footer-container">
+									<ul id="menu-footer" class="menu">
+										<li id="menu-item-96"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96">
+											<a href="privacy-policy.html">Privacy Policy</a></li>
+										<li id="menu-item-97"
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97">
+											<a href="terms-and-conditions.html">Terms and Conditions</a>
+										</li>
+										<li id="menu-item-112"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-112">
+											<a href="https://www.facebook.com/YafanewEnterprises/">Facebook</a></li>
+										<li id="menu-item-113"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113">
+											<a href="https://www.reddit.com/user/YafanewEnterprises/">Reddit</a></li>
+										<li id="menu-item-114"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114">
+											<a href="https://www.pinterest.com/YafanewEnterprises/">Pinterest</a></li>
+										<li id="menu-item-115"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-115">
+											<a href="https://medium.com/@YafanewEnterprises">Medium</a></li>
+										<li id="menu-item-116"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-116">
+											<a
+												href="https://www.youtube.com/channel/UCEIvPa7uoois_YqEeZGQEhA">Youtube</a>
+										</li>
+									</ul>
+								</div>
+							</div><!-- #footer-bottom-menu -->
+
+
+
+						</div><!-- #footer-bottom-inner -->
+
+
+					</div><!-- #footer-bottom -->
+
+
+				</div><!-- #footer-inner -->
+
+
+			</footer><!-- #footer -->
+
+
+		</div><!-- #wrap -->
+
+
+	</div><!-- #outer-wrap -->
+
+
+
+	<a id="scroll-top" class="scroll-top-right" href="#"><span class="fa fa-angle-up"></span></a>
+
+
+	<div id="sidr-close">
+		<a href="#" class="toggle-sidr-close">
+			<i class="icon icon-close"></i><span class="close-text">Close Menu</span>
+		</a>
+	</div>
+
+
+	<div id="mobile-menu-search" class="clr">
+		<form method="get" action="/" class="mobile-searchform">
+			<input type="search" name="s" autocomplete="off" placeholder="Search">
+			<button type="submit" class="searchform-submit">
+				<i class="icon icon-magnifier"></i>
+			</button>
+		</form>
+	</div><!-- .mobile-menu-search -->
+
+	<script type="text/javascript" src="js/imagesloaded.min.js" id="imagesloaded-js"></script>
+	<script type="text/javascript" src="js/magnific-popup.min.js" id="magnific-popup-js"></script>
+	<script type="text/javascript" src="js/lightbox.min.js" id="oceanwp-lightbox-js"></script>
+	<script type="text/javascript" id="oceanwp-main-js-extra">
+		/* <![CDATA[ */
+		var oceanwpLocalize = { "isRTL": "", "menuSearchStyle": "disabled", "sidrSource": "#sidr-close, #site-navigation, #mobile-menu-search", "sidrDisplace": "1", "sidrSide": "left", "sidrDropdownTarget": "icon", "verticalHeaderTarget": "icon", "customSelects": ".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select", "ajax_url": "https:\/\/yafanew.com\/wp-admin\/admin-ajax.php" };
+/* ]]> */
+	</script>
+	<script type="text/javascript" src="js/main.min.js" id="oceanwp-main-js"></script>
+	<script type="text/javascript" src="js/wp-embed.min.js" id="wp-embed-js"></script>
+	<script type="text/javascript" src="js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
+	<script type="text/javascript" src="js/core.min.js" id="jquery-ui-core-js"></script>
+	<script type="text/javascript" src="js/dialog.min.js" id="elementor-dialog-js"></script>
+	<script type="text/javascript" src="js/waypoints.min.js" id="elementor-waypoints-js"></script>
+	<script type="text/javascript" src="js/swiper.min.js" id="swiper-js"></script>
+	<script type="text/javascript" src="js/share-link.min.js" id="share-link-js"></script>
+	<script type="text/javascript" id="elementor-frontend-js-before">
+		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "version": "3.0.14", "is_static": false, "legacyMode": { "elementWrappers": true }, "urls": { "assets": "https:\/\/yafanew.com\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 121, "title": "Payment%20and%20Tracking%20-%20Yafanew%20Enterprises", "excerpt": "", "featuredImage": false } };
+	</script>
+	<script type="text/javascript" src="js/frontend.min_1.js" id="elementor-frontend-js"></script><span
+		id="elementor-device-mode" class="elementor-screen-only"></span>
+	<script type="text/javascript" src="js/underscore.min.js" id="underscore-js"></script>
+	<script type="text/javascript" id="wp-util-js-extra">
+		/* <![CDATA[ */
+		var _wpUtilSettings = { "ajax": { "url": "\/wp-admin\/admin-ajax.php" } };
+/* ]]> */
+	</script>
+	<script type="text/javascript" src="js/wp-util.min.js" id="wp-util-js"></script>
+	<script type="text/javascript" id="wpforms-elementor-js-extra">
+		/* <![CDATA[ */
+		var wpformsElementorVars = { "recaptcha_type": "v2" };
+/* ]]> */
+	</script>
+	<script type="text/javascript" src="js/frontend.min.js" id="wpforms-elementor-js"></script>
+
+
+	<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1614304832 -->
+	<div id="sidr" class="sidr left" style="transition: left 0.3s ease 0s;">
+		<div class="sidr-inner">
+			<a href="#" class="sidr-class-toggle-sidr-close">
+				<i class="sidr-class-icon icon-close"></i><span class="sidr-class-close-text">Close Menu</span>
+			</a>
+		</div>
+		<div class="sidr-inner">
+
+			<ul id="sidr-id-menu-fas" class="sidr-class-main-menu sidr-class-dropdown-menu sidr-class-sf-menu">
+				<li id="sidr-id-menu-item-54"
+					class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-home sidr-class-menu-item-54">
+					<a href="/" class="sidr-class-menu-link"><span
+							class="sidr-class-text-wrap">Home</span></a></li>
+				<li id="sidr-id-menu-item-55"
+					class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-menu-item-55">
+					<a href="/about-us.html" class="sidr-class-menu-link"><span
+							class="sidr-class-text-wrap">About Us</span></a></li>
+				<li id="sidr-id-menu-item-56"
+					class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-menu-item-56">
+					<a href="/brands.html" class="sidr-class-menu-link"><span
+							class="sidr-class-text-wrap">Brands</span></a></li>
+				<li id="sidr-id-menu-item-133"
+					class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-current-menu-item sidr-class-page_item sidr-class-page-item-121 sidr-class-current_page_item sidr-class-menu-item-133">
+					<a href="/payment-tracking.html" class="sidr-class-menu-link"><span
+							class="sidr-class-text-wrap">Payment and Tracking</span></a></li>
+				<li id="sidr-id-menu-item-57"
+					class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-menu-item-57">
+					<a href="/contact-us.html" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Contact
+							Us</span></a></li>
+			</ul>
+		</div>
+		<div class="sidr-inner">
+			<form method="get" action="/" class="sidr-class-mobile-searchform">
+				<input type="search" name="s" autocomplete="off" placeholder="Search">
+				<button type="submit" class="sidr-class-searchform-submit">
+					<i class="sidr-class-icon icon-magnifier"></i>
+				</button>
 			</form>
-</div><!-- .mobile-menu-search -->
+		</div>
+	</div>
+</body>
 
-<script type="text/javascript" src="js/imagesloaded.min.js" id="imagesloaded-js"></script>
-<script type="text/javascript" src="js/magnific-popup.min.js" id="magnific-popup-js"></script>
-<script type="text/javascript" src="js/lightbox.min.js" id="oceanwp-lightbox-js"></script>
-<script type="text/javascript" id="oceanwp-main-js-extra">
-/* <![CDATA[ */
-var oceanwpLocalize = {"isRTL":"","menuSearchStyle":"disabled","sidrSource":"#sidr-close, #site-navigation, #mobile-menu-search","sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"icon","verticalHeaderTarget":"icon","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select","ajax_url":"https:\/\/yafanew.com\/wp-admin\/admin-ajax.php"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="js/main.min.js" id="oceanwp-main-js"></script>
-<script type="text/javascript" src="js/wp-embed.min.js" id="wp-embed-js"></script>
-<!--[if lt IE 9]>
-<script type='text/javascript' src='https://yafanew.com/wp-content/themes/oceanwp/assets/js//third/html5.min.js?ver=1.6.7' id='html5shiv-js'></script>
-<![endif]-->
-<script type="text/javascript" src="js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
-<script type="text/javascript" src="js/core.min.js" id="jquery-ui-core-js"></script>
-<script type="text/javascript" src="js/dialog.min.js" id="elementor-dialog-js"></script>
-<script type="text/javascript" src="js/waypoints.min.js" id="elementor-waypoints-js"></script>
-<script type="text/javascript" src="js/swiper.min.js" id="swiper-js"></script>
-<script type="text/javascript" src="js/share-link.min.js" id="share-link-js"></script>
-<script type="text/javascript" id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.14","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":"https:\/\/yafanew.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":121,"title":"Payment%20and%20Tracking%20-%20Yafanew%20Enterprises","excerpt":"","featuredImage":false}};
-</script>
-<script type="text/javascript" src="js/frontend.min_1.js" id="elementor-frontend-js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
-<script type="text/javascript" src="js/underscore.min.js" id="underscore-js"></script>
-<script type="text/javascript" id="wp-util-js-extra">
-/* <![CDATA[ */
-var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
-/* ]]> */
-</script>
-<script type="text/javascript" src="js/wp-util.min.js" id="wp-util-js"></script>
-<script type="text/javascript" id="wpforms-elementor-js-extra">
-/* <![CDATA[ */
-var wpformsElementorVars = {"recaptcha_type":"v2"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="js/frontend.min.js" id="wpforms-elementor-js"></script>
-
-
-<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1614304832 --><div id="sidr" class="sidr left" style="transition: left 0.3s ease 0s;"><div class="sidr-inner">
-	<a href="#" class="sidr-class-toggle-sidr-close">
-		<i class="sidr-class-icon icon-close"></i><span class="sidr-class-close-text">Close Menu</span>
-	</a>
-</div><div class="sidr-inner">
-
-				<ul id="sidr-id-menu-fas" class="sidr-class-main-menu sidr-class-dropdown-menu sidr-class-sf-menu"><li id="sidr-id-menu-item-54" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-home sidr-class-menu-item-54"><a href="https://yafanew.com/" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Home</span></a></li><li id="sidr-id-menu-item-55" class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-menu-item-55"><a href="https://yafanew.com/about-us/" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">About Us</span></a></li><li id="sidr-id-menu-item-56" class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-menu-item-56"><a href="https://yafanew.com/brands/" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Brands</span></a></li><li id="sidr-id-menu-item-133" class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-current-menu-item sidr-class-page_item sidr-class-page-item-121 sidr-class-current_page_item sidr-class-menu-item-133"><a href="https://yafanew.com/payment-tracking/" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Payment and Tracking</span></a></li><li id="sidr-id-menu-item-57" class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-menu-item-57"><a href="https://yafanew.com/contact-us/" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Contact Us</span></a></li></ul>
-			</div><div class="sidr-inner">
-	<form method="get" action="https://yafanew.com/" class="sidr-class-mobile-searchform">
-		<input type="search" name="s" autocomplete="off" placeholder="Search">
-		<button type="submit" class="sidr-class-searchform-submit">
-			<i class="sidr-class-icon icon-magnifier"></i>
-		</button>
-			</form>
-</div></div></body></html>
+</html>
